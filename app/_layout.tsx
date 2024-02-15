@@ -18,60 +18,60 @@ const CustomDrawerContent = (props:any) => {
         <Text>Perfil</Text>
       </View>
     <DrawerItem
-    icon={(color, size) => (
-      <SimpleLineIcons name="people" size={24} color={pathname == '/two' ? '#fff' : '#000'} />
-    )}
-    label={'Clientes'}
-    labelStyle={[styles.navItemLabel, {color: pathname == '/two' ? '#fff' : '#000'}]}
-    style={{ backgroundColor: pathname == '/two' ? '#000' : '#fff' }}
-    onPress={() => {
-      router.push('/(drawer)/(tabs)/two');
-    }}
+      icon={(color, size) => (
+        <SimpleLineIcons name="people" size={24} color={ pathname == '/two' ? '#fff' : '#000' } />
+      )}
+      label={'Clientes'}
+      labelStyle={[styles.navItemLabel, {color: pathname == '/two' ? '#fff' : '#000'}]}
+      style={{ backgroundColor: pathname == '/two' ? '#000' : '#fff' }}
+      onPress={() => {
+        router.push('/(drawer)/(tabs)/two');
+      }}
     />
     <DrawerItem
-    icon={(color, size) => (
-      <SimpleLineIcons  name="tag" size={24} color={color}/>
-    )}
-    label={'Productos'}
-    onPress={() => {
-      router.push('/(drawer)/(tabs)/');
-    }}
+      icon={(color, size) => (
+        <SimpleLineIcons  name="tag" size={24} color={color}/>
+      )}
+      label={'Productos'}
+      onPress={() => {
+        router.push('/(drawer)/(tabs)/');
+      }}
     />
     <DrawerItem
-    icon={(color, size) => (
-      <SimpleLineIcons name="user" size={24} color={color}/>
-    )}
-    label={'Perfil'}
-    onPress={() => {
-      router.push('/(drawer)/(tabs)/');
-    }}
+      icon={(color, size) => (
+        <SimpleLineIcons name="user" size={24} color={color}/>
+      )}
+      label={'Perfil'}
+      onPress={() => {
+        router.push('/(drawer)/(tabs)/');
+      }}
     />
     <DrawerItem
-    icon={(color, size) => (
-      <SimpleLineIcons name="info" size={24} color={color}/>
-    )}
-    label={'Cambios'}
-    onPress={() => {
-      router.push('/(drawer)/(tabs)/');
-    }}
+      icon={(color, size) => (
+        <SimpleLineIcons name="info" size={24} color={color}/>
+      )}
+      label={'Cambios'}
+      onPress={() => {
+        router.push('/modal');
+      }}
     />
     <DrawerItem
-    icon={(color, size) => (
-      <SimpleLineIcons name="support" size={24} color={color}/>
-    )}
-    label={'Términos de Servicio'}
-    onPress={() => {
-      router.push('/(drawer)/(tabs)/');
-    }}
+      icon={(color, size) => (
+        <SimpleLineIcons name="support" size={24} color={color}/>
+      )}
+      label={'Términos de Servicio'}
+      onPress={() => {
+        router.push('/(drawer)/(tabs)/');
+      }}
     />
     <DrawerItem
-    icon={(color, size) => (
-      <SimpleLineIcons name="power" size={24} color={color}/>
-    )}
-    label={'Cerrar Sesión'}
-    onPress={() => {
-      router.push('/(drawer)/(tabs)/');
-    }}
+      icon={(color, size) => (
+        <SimpleLineIcons name="power" size={24} color={color}/>
+      )}
+      label={'Cerrar Sesión'}
+      onPress={() => {
+        router.push('/(drawer)/(tabs)/');
+      }}
     />
     <View>
       <Text>Logis</Text>
