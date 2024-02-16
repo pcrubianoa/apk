@@ -4,9 +4,14 @@ import { Drawer } from 'expo-router/drawer';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import { Feather, EvilIcons, SimpleLineIcons  } from '@expo/vector-icons';
 import { router, usePathname } from 'expo-router';
+import { useFonts } from "expo-font";
 
 const CustomDrawerContent = (props:any) => {
   const pathname = usePathname();
+  const [loaded, error] = useFonts({
+    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+
+  });
 
   useEffect(() => {
 
@@ -14,8 +19,9 @@ const CustomDrawerContent = (props:any) => {
 
   return(
     <DrawerContentScrollView {...props}>
-      <View>
-        <Text>Perfil</Text>
+      <View style={styles.profile}>
+        <SimpleLineIcons name="user" size={24} color={ '#000' } />
+        <Text>Foto de Perfil</Text>
       </View>
     <DrawerItem
       icon={(color, size) => (
@@ -74,8 +80,7 @@ const CustomDrawerContent = (props:any) => {
       }}
     />
     <View>
-      <Text>Logis</Text>
-      <Text>2024</Text>
+      <Text>Logis @ 2024</Text>
     </View>
     </DrawerContentScrollView>
   )
@@ -89,6 +94,10 @@ export default function Layout() {
 }
 
 const styles = StyleSheet.create({
+  profile:{
+    margin: 20,
+    flex: 1,
+  },
   navItemLabel: {
     //marginLeft: -20,
     //fontSize: 18
