@@ -29,52 +29,62 @@ const CustomDrawerContent = (props:any) => {
       )}
       label={'Clientes'}
       labelStyle={[styles.navItemLabel, {color: pathname == '/two' ? '#fff' : '#000'}]}
-      style={{ backgroundColor: pathname == '/two' ? '#000' : '#fff' }}
+      style={{ backgroundColor: pathname == '/two' ? '#007bff' : '#fff' }}
       onPress={() => {
         router.push('/(drawer)/(tabs)/two');
       }}
     />
     <DrawerItem
       icon={(color, size) => (
-        <SimpleLineIcons  name="tag" size={24} color={color}/>
+        <SimpleLineIcons  name="tag" size={24} color={ pathname == '/two' ? '#fff' : '#000' }/>
       )}
       label={'Productos'}
+      labelStyle={[styles.navItemLabel, {color: pathname == '/two' ? '#fff' : '#000'}]}
+      style={{ backgroundColor: pathname == '/two' ? '#007bff' : '#fff' }}
       onPress={() => {
         router.push('/(drawer)/(tabs)/');
       }}
     />
     <DrawerItem
       icon={(color, size) => (
-        <SimpleLineIcons name="user" size={24} color={color}/>
+        <SimpleLineIcons name="user" size={24} color={ pathname == '/two' ? '#fff' : '#000' }/>
       )}
       label={'Perfil'}
+      labelStyle={[styles.navItemLabel, {color: pathname == '/two' ? '#fff' : '#000'}]}
+      style={{ backgroundColor: pathname == '/two' ? '#007bff' : '#fff' }}
       onPress={() => {
         router.push('/(drawer)/(tabs)/');
       }}
     />
     <DrawerItem
       icon={(color, size) => (
-        <SimpleLineIcons name="info" size={24} color={color}/>
+        <SimpleLineIcons name="info" size={24} color={ pathname == '/two' ? '#fff' : '#000' }/>
       )}
       label={'Cambios'}
+      labelStyle={[styles.navItemLabel, {color: pathname == '/modal' ? '#fff' : '#000'}]}
+      style={{ backgroundColor: pathname == '/modal' ? '#007bff' : '#fff' }}
       onPress={() => {
         router.push('/modal');
       }}
     />
     <DrawerItem
       icon={(color, size) => (
-        <SimpleLineIcons name="support" size={24} color={color}/>
+        <SimpleLineIcons name="support" size={24} color={ pathname == '/two' ? '#fff' : '#000' }/>
       )}
       label={'Términos de Servicio'}
+      labelStyle={[styles.navItemLabel, {color: pathname == '/two' ? '#fff' : '#000'}]}
+      style={{ backgroundColor: pathname == '/two' ? '#007bff' : '#fff' }}
       onPress={() => {
         router.push('/(drawer)/(tabs)/');
       }}
     />
     <DrawerItem
       icon={(color, size) => (
-        <SimpleLineIcons name="power" size={24} color={color}/>
+        <SimpleLineIcons name="power" size={24} color={ pathname == '/two' ? '#fff' : '#000' }/>
       )}
       label={'Cerrar Sesión'}
+      labelStyle={[styles.navItemLabel, {color: pathname == '/two' ? '#fff' : '#000'}]}
+      style={{ backgroundColor: pathname == '/two' ? '#007bff' : '#fff' }}
       onPress={() => {
         router.push('/(drawer)/(tabs)/');
       }}

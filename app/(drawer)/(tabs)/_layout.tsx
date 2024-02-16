@@ -2,6 +2,8 @@ import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable } from 'react-native';
+import { Feather, EvilIcons, SimpleLineIcons, MaterialIcons  } from '@expo/vector-icons';
+import { router, usePathname } from 'expo-router';
 
 import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
@@ -17,6 +19,7 @@ function TabBarIcon(props: {
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const pathname = usePathname();
 
   return (
     <Tabs
@@ -29,9 +32,13 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+          title: 'Mesas',
+          tabBarLabelStyle: {
+            fontSize: 12,
+            fontWeight: "bold",
+          },
           headerShown: false,
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <SimpleLineIcons name="cup" size={25} color={ pathname == '/modal' ? '#fff' : '#000' }/>,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -51,17 +58,25 @@ export default function TabLayout() {
       <Tabs.Screen
         name="two"
         options={{
-          title: 'Tab Two',
+          title: 'Productos',
+          tabBarLabelStyle: {
+            fontSize: 12,
+            fontWeight: "bold",
+          },
           headerShown: false,
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <SimpleLineIcons name="handbag" size={25} color={ pathname == '/modal' ? '#fff' : '#000' } />,
         }}
       />
       <Tabs.Screen
         name="three"
         options={{
-          title: 'Tab Three',
+          title: 'Perfil',
+          tabBarLabelStyle: {
+            fontSize: 12,
+            fontWeight: "bold",
+          },
           headerShown: false,
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <SimpleLineIcons name="user" size={25} color={ pathname == '/modal' ? '#fff' : '#000' } />,
         }}
       />
     </Tabs>
