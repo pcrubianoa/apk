@@ -1,17 +1,17 @@
-import { Text, Pressable, Image, StyleSheet } from 'react-native';
+import { Text, Pressable, Image, StyleSheet, SafeAreaView } from 'react-native';
 import React from 'react';
 import { View } from '@/components/Themed';
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 
 export default function CustomDrawerContent(props:any) {
   return (
-    <View style={{ flex:1 }}>
-      <View style={{ backgroundColor: '#1873e7', padding: 40 }}>
-        <Text>Bares y Restaurantes</Text>
-        <Text>Perfil</Text>
+    <SafeAreaView style={{ flex:1 }}>
+      <View style={{ backgroundColor: '#1873e7', height: 120 }}>
+        <Text style={{ marginTop: 50, paddingHorizontal: 20, color: 'white', fontSize: 20, fontWeight: 'bold' }}>BARES Y RESTAURANTES</Text>
+        <Text style={{ paddingHorizontal: 20, color: 'white', fontSize: 20 }}>TERCERO AUXILIAR</Text>
       </View>
       <DrawerContentScrollView {...props}>
-        <Text style={{ padding: 20, color: 'gray' }}>Menú principal</Text>
+        <Text style={{ paddingHorizontal: 20, color: 'gray' }}>Menú principal</Text>
         <DrawerItemList {...props}/>
       </DrawerContentScrollView>
       <Pressable style={{ padding: 20 }}>
@@ -22,7 +22,7 @@ export default function CustomDrawerContent(props:any) {
           <Image style={styles.stretch} source={require('../assets/images/logo.png')}/>
         </View> */}
       </Pressable>
-    </View>
+    </SafeAreaView>
   )
 }
 
