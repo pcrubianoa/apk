@@ -12,20 +12,18 @@ import { useClientOnlyValue } from '@/components/useClientOnlyValue';
 export default function _layout() {
 
   return (
-    <Tabs screenOptions={{
-        headerShown: false
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: "bold",
+          },
      }}>
       <Tabs.Screen
         name="mesas"
         options={{
-          tabBarIcon: ({ size, color }) => (
-            <AntDesign name="pptfile1" size={24} color="black" />
-          )
-         }}>
-      </Tabs.Screen>
-      <Tabs.Screen
-        name="perfil"
-        options={{
+          title:"Mesas",
           tabBarIcon: ({ size, color }) => (
             <AntDesign name="pptfile1" size={24} color="black" />
           )
@@ -34,6 +32,16 @@ export default function _layout() {
       <Tabs.Screen
         name="productos"
         options={{
+          title:"Productos",
+          tabBarIcon: ({ size, color }) => (
+            <AntDesign name="pptfile1" size={24} color="black" />
+          )
+         }}>
+      </Tabs.Screen>
+      <Tabs.Screen
+        name="perfil"
+        options={{
+          title:"Perfil",
           tabBarIcon: ({ size, color }) => (
             <AntDesign name="pptfile1" size={24} color="black" />
           )
